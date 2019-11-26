@@ -68,6 +68,9 @@ def get_filters():
     return city, month, day
 
 def progress_animation():
+	"""
+    Making progress_animation while loading data
+    """
     print()
     for i in range(0, 105,5):
         print("{} % ".format(i), end='')
