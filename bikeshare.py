@@ -41,10 +41,10 @@ def get_filters():
     print()
     print('------------------------------SELCTING THE CITY---------------------------------------------')
     print()
-    city = input('Would you like to see data for Chicago, New York, or Washington?').lower()
+    city = input('Look for the data of Chicago, New York, or Washington?').lower()
 
     while  city not in ['chicago', 'new york city', 'washington']:
-        city = input('{} data doesn\'t exist,we believe that you\'ve made a clerical error please select :\n Either chicago \n Or new york city \n Or washington \n\n'.format(city)).lower()
+        city = input('{} data doesn\'t exist,please select from this [chicago, new york city, washington]'.format(city)).lower()
 
     print()
     print('The {} city has been selected successfully'.format(city))
@@ -53,7 +53,7 @@ def get_filters():
     print()
     month = input('For {} city, please chose whether to look at : \n All months data by taping -all \n Or chose from the this list [january, february, march, april, may, june]. \n'.format(city)).lower()
     while  month not in ['all', 'january', 'february', 'march', 'april', 'may', 'june']:
-        month = input('{} doesn\'t exist,we believe that you\'ve made a clerical error please select :\n Either all \n Or chose from the this list [january, february, march, april, may, june] \n\n'.format(month)).lower()
+        month = input('{} doesn\'t exist, please select from this [january, february, march, april, may, june] \n\n'.format(month)).lower()
     print()
     print('You have selected to look for {} data'.format(month))
     print()
@@ -68,9 +68,6 @@ def get_filters():
     return city, month, day
 
 def progress_animation():
-	"""
-    Making progress_animation while loading data
-    """
     print()
     for i in range(0, 105,5):
         print("{} % ".format(i), end='')
